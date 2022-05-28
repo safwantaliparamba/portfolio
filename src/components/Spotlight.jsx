@@ -13,9 +13,8 @@ function Spotlight() {
                     </h1>
                     <div>
                         <a
-                            href="http://localhost:3000/static/media/safwan.afb03a9507ce0e5b1428.png"
+                            href="#/"
                             className="btn"
-                            download
                         >
                             Download CV
                         </a>

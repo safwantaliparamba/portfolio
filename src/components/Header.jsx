@@ -1,4 +1,6 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
+
 import Modal from "../UI/Modal";
 import "./Header.css";
 
@@ -14,20 +16,22 @@ function Header() {
             <header>
                 <div className="wrapper">
                     <h1>
-                        <a href="/">SAFWAN</a>
+                        <Link to="/">SAFWAN</Link>
                     </h1>
                     <nav>
                         <ul>
                             <li>
-                                <a href="/">Home</a>
+                                <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <a href="/">About</a>
+                                <Link to="/about">About</Link>
                             </li>
                             <li>
-                                <a href="/">Portfolio</a>
+                                <Link to="/portfolio">Portfolio</Link>
                             </li>
-                            <li className="btn">Contact</li>
+                            <li className="btn">
+                                <Link to="/contact">Contact</Link>
+                            </li>
                         </ul>
                     </nav>
                     <div className="demo" onClick={menuToggle}>
