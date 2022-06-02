@@ -1,73 +1,88 @@
-import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useLayoutEffect } from "react";
 
-import Modal from "../UI/Modal";
 import "./Header.css";
+import Modal from "../UI/Modal";
 
 function Header() {
-    const [isShown, setIsShown] = useState(false);
-    const inputRef = useRef();
-    const menuToggle = () => {
-        setIsShown(!isShown);
-        inputRef.current.checked = !isShown;
+    const [isShow, setIsShow] = useState(false);
+    const [hasWidth, setHasWidth] = useState(false);
+
+    useLayoutEffect(() => {
+        const updateSize = () => {
+            if (window.innerWidth <= 768) {
+                setHasWidth(true);
+            }else{
+                setHasWidth(false)
+            }
+        };
+        window.addEventListener("resize", updateSize);
+        updateSize();
+        return () => {
+            window.removeEventListener("resize", updateSize);
+        };
+    }, [hasWidth]);
+
+    const toggleHandler = () => {
+        setIsShow(!isShow);
     };
     return (
-        <>
-            <header>
-                <div className="wrapper">
-                    <h1>
-                        <Link to="/">SAFWAN</Link>
-                    </h1>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/portfolio">Portfolio</Link>
-                            </li>
-                            <li className="btn">
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="demo" onClick={menuToggle}>
-                        <div className="menu-icon">
-                            <input
-                                className="menu-icon__cheeckbox"
-                                type="checkbox"
-                                ref={inputRef}
-                            />
-                            <div>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
+        <section id="header">
+            <header className="wrapper">
+                <a href="/">SAFWAN</a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/" className="active">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">About</a>
+                        </li>
+                        <li>
+                            <a href="/">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="/">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                {hasWidth && (
+                    <div className="mobile-nav">
+                        <button
+                            id="menu-toggler"
+                            data-class="menu-active"
+                            className="hamburger"
+                            onClick={toggleHandler}
+                        >
+                            <span className="hamburger-line hamburger-line-top"></span>
+                            <span className="hamburger-line hamburger-line-middle"></span>
+                            <span className="hamburger-line hamburger-line-bottom"></span>
+                        </button>
+                        {isShow && (
+                            <Modal onClick={toggleHandler}>
+                                <ul className="mobile-menu">
+                                    <li>
+                                        <a href="/" className="active">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">Contact</a>
+                                    </li>
+                                </ul>
+                            </Modal>
+                        )}
                     </div>
-                </div>
+                )}
             </header>
-            {isShown && (
-                <Modal onClick={menuToggle}>
-                    <nav className="menu-modal">
-                        <ul>
-                            <li>
-                                <a href="/">Home</a>
-                            </li>
-                            <li>
-                                <a href="/">About</a>
-                            </li>
-                            <li>
-                                <a href="/">Portfolio</a>
-                            </li>
-                            <li className="btn">Contact</li>
-                        </ul>
-                    </nav>
-                </Modal>
-            )}
-        </>
+        </section>
     );
 }
 

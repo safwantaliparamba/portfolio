@@ -1,53 +1,167 @@
 #spotlight {
-    background: url("../assets/images/bg-modal.jpg") no-repeat;
-    background-size: cover;
-    background-position: 0 -245px;
+    box-sizing: border-box;
+    padding: 50px 0 0;
+    /* position: fixed; */
+    min-height: calc(100% - 102px);
     width: 100%;
-    height: calc(100vh - 106px);
+    background: url("../assets/images/wave-white.png") no-repeat;
+    background-position: 0 -160px;
 }
-#spotlight > div{
+#spotlight .wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#spotlight .left{
-    width: 50%;
-    height: 100%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    padding-left: 100px;
-    margin: auto 0;
+#spotlight .left {
+    padding-top: 42px;
 }
-#spotlight .left h1{
-    font-size: 50px;
-    font-weight: 600;
-    color: #fff;
-    font-style: italic;
-    margin-bottom: 24px;
-}
-#spotlight .left h1 span{
-    font-size: 60px;
-    font-weight: 700;
-    color: #e42544;
-    font-style: normal;
-}
-#spotlight .left div a.btn{
-    padding: 12px 24px;
-    background: #e42544;
-    border-radius: 5px;
-    margin-right: 24px;
+#spotlight .left h1 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    font-size: 54px;
+    font-weight: 500;
+    letter-spacing: 2px;
     color: #111;
-    font-size: 20px;
+    margin-bottom: 32px;
+}
+#spotlight .left h1 span {
+    color: #36174d;
+    font-size: 56px;
     font-weight: 600;
 }
-#spotlight .left div a.blue{
-    margin-right: 0;
-    background: #2b8affc7 ;
+#spotlight .left .about {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 46px;
 }
-#spotlight .right{
-    width: 50%;
+#spotlight .left .about span.line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    margin-top: 10px;
 }
-#spotlight .right img{
+#spotlight .left .about p {
+    display: inline-block;
+    margin-left: 32px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+#spotlight .left .links {
+    margin-bottom: 100px;
+}
+#spotlight .left .links a {
+    margin-right: 24px;
+    font-weight: 600;
+    padding: 20px 40px;
+    border-radius: 25px;
+}
+#spotlight .left .links a.link {
+    background: #36174d;
+    color: #fff;
+}
+#spotlight .left .links a.link2 {
+    background: #f3effe;
+    color: #36174d;
+}
+#spotlight .left .social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#spotlight .left .social span {
+    color: #36174d;
+    font-weight: 600;
+}
+#spotlight .left .social ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 32px;
+}
+#spotlight .left .social ul li {
     display: block;
-    width: 75%;
+    margin-right: 24px;
+    width: 40px;
 }
+#spotlight .left .social ul li a {
+    display: block;
+    width: 100%;
+}
+#spotlight .left .social ul li a img {
+    display: block;
+    width: 100%;
+}
+/* #spotlight .right {} */
+#spotlight .right img {
+    display: block;
+    width: 700px;
+    margin-bottom: 55px;
+}
+
+/* media queries  */
+
+/* @media all and (max-width:1440px){}
+@media all and (max-width:1280px){}
+@media all and (max-width:1024px){}
+@media all and (max-width:960px){}
+@media all and (max-width:720px){}
+@media all and (max-width:640px){}
+@media all and (max-width:480px){}
+@media all and (max-width:360px){}
+@media all and (max-width:320px){} */
+
+@media all and (max-width:1440px){
+    #spotlight .left .links a{
+        padding: 10px 25px;
+    }
+    #spotlight .right img{
+        width: 550px;
+        margin-bottom: 32px;
+    }
+}
+/* @media all and (max-width:1280px){} */
+@media all and (max-width:1024px){
+    #spotlight .left .social span{
+        font-size: 14px;
+    }
+}
+@media all and (max-width:960px){
+    #spotlight .right img{
+        width: 370px;
+    }
+}
+@media all and (max-width:768px){
+    #spotlight {
+        background: none;
+    }
+    #spotlight .left h1{
+        font-size: 45px;
+    }
+    #spotlight .left h1 span{
+        font-size: inherit;
+    }
+    #spotlight .left .about p{
+        font-size: 14px;
+    }
+    #spotlight .left .links a{
+        padding: 10px 15px;
+    }
+}
+@media all and (max-width:640px){
+    #spotlight .wrapper{
+        flex-direction: column-reverse;
+    }
+}
+@media all and (max-width:480px){
+    #spotlight .left h1{
+        font-size: 40px;
+    }
+    #spotlight .right img{
+        margin-bottom: 0;
+    }
+}
+@media all and (max-width:360px){}
+@media all and (max-width:320px){}

@@ -24,6 +24,7 @@ body {
 	overflow-x: hidden;
 	min-width: 320px;
 	font-weight: 400;
+	background: #f3effe;
 }
 input,textarea,select{
 	font-family: "Circular-Std-Regular", Arial, Helvetica, sans-serif;
