@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Header.css";
 import Modal from "../UI/Modal";
@@ -11,8 +12,8 @@ function Header() {
         const updateSize = () => {
             if (window.innerWidth <= 768) {
                 setHasWidth(true);
-            }else{
-                setHasWidth(false)
+            } else {
+                setHasWidth(false);
             }
         };
         window.addEventListener("resize", updateSize);
@@ -28,22 +29,40 @@ function Header() {
     return (
         <section id="header">
             <header className="wrapper">
-                <a href="/">SAFWAN</a>
+                <NavLink to="/">SAFWAN</NavLink>
                 <nav>
                     <ul>
                         <li>
-                            <a href="/" className="active">
+                            <NavLink
+                                to="/"
+                                activeClassName="active"
+                            >
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
-                            <a href="/">About</a>
+                            <NavLink
+                                to="/about"
+                                activeClassName="active"
+                            >
+                                About
+                            </NavLink>
                         </li>
                         <li>
-                            <a href="/">Portfolio</a>
+                            <NavLink
+                                to="/portfolio"
+                                activeClassName="active"
+                            >
+                                Portfolio
+                            </NavLink>
                         </li>
                         <li>
-                            <a href="/">Contact</a>
+                            <NavLink
+                                to="/contact"
+                                activeClassName="active"
+                            >
+                                Contact
+                            </NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -61,20 +80,20 @@ function Header() {
                         </button>
                         {isShow && (
                             <Modal onClick={toggleHandler}>
-                                <ul className="mobile-menu">
+                                <ul className='mobile-menu'>
                                     <li>
-                                        <a href="/" className="active">
-                                            Home
-                                        </a>
+                                        <NavLink to="/">Home</NavLink>
                                     </li>
                                     <li>
-                                        <a href="/">About</a>
+                                        <NavLink to="/about">About</NavLink>
                                     </li>
                                     <li>
-                                        <a href="/">Portfolio</a>
+                                        <NavLink to="/portfolio">
+                                            Portfolio
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <a href="/">Contact</a>
+                                        <NavLink to="/contact">Contact</NavLink>
                                     </li>
                                 </ul>
                             </Modal>

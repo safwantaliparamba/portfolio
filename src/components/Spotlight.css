@@ -15,14 +15,18 @@
 #spotlight .left {
     padding-top: 42px;
 }
-#spotlight .left h1 {
+#spotlight .left h1,#spotlight .left > p  {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
     font-size: 54px;
     font-weight: 500;
     letter-spacing: 2px;
     color: #111;
+}
+#spotlight .left > p {
     margin-bottom: 32px;
+    font-size: 25px;
+    font-weight: 600;
 }
 #spotlight .left h1 span {
     color: #36174d;
@@ -113,55 +117,57 @@
 @media all and (max-width:360px){}
 @media all and (max-width:320px){} */
 
-@media all and (max-width:1440px){
-    #spotlight .left .links a{
+@media all and (max-width: 1440px) {
+    #spotlight .left .links a {
         padding: 10px 25px;
     }
-    #spotlight .right img{
+    #spotlight .right img {
         width: 550px;
         margin-bottom: 32px;
     }
 }
 /* @media all and (max-width:1280px){} */
-@media all and (max-width:1024px){
-    #spotlight .left .social span{
+@media all and (max-width: 1024px) {
+    #spotlight .left .social span {
         font-size: 14px;
     }
 }
-@media all and (max-width:960px){
-    #spotlight .right img{
+@media all and (max-width: 960px) {
+    #spotlight .right img {
         width: 370px;
     }
 }
-@media all and (max-width:768px){
+@media all and (max-width: 768px) {
     #spotlight {
         background: none;
     }
-    #spotlight .left h1{
+    #spotlight .left h1 {
         font-size: 45px;
     }
-    #spotlight .left h1 span{
+    #spotlight .left h1 span {
         font-size: inherit;
     }
-    #spotlight .left .about p{
+    #spotlight .left .about p {
         font-size: 14px;
     }
-    #spotlight .left .links a{
+    #spotlight .left .links a {
         padding: 10px 15px;
     }
 }
-@media all and (max-width:640px){
-    #spotlight .wrapper{
+@media all and (max-width: 640px) {
+    #spotlight .wrapper {
         flex-direction: column-reverse;
     }
 }
-@media all and (max-width:480px){
-    #spotlight .left h1{
+@media all and (max-width: 480px) {
+    #spotlight .left h1 {
         font-size: 40px;
     }
-    #spotlight .right img{
+    #spotlight .right img {
         margin-bottom: 0;
     }
 }
-@media all and (max-width:360px){}
-@media all and (max-width:320px){}
+@media all and (max-width: 360px) {
+}
+@media all and (max-width: 320px) {
+}
