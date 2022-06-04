@@ -153,6 +153,9 @@
     #spotlight .left .links a {
         padding: 10px 15px;
     }
+    #spotlight .left .links a.link2{
+        background: #fff;
+    }
 }
 @media all and (max-width: 640px) {
     #spotlight .wrapper {

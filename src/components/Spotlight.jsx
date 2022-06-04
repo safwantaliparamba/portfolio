@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./Spotlight.css";
 import github from "../assets/icons/github.png";
@@ -24,12 +25,12 @@ function Spotlight() {
                         </p>
                     </div>
                     <div className="links">
-                        <a href="/" className="link">
+                        <Link to="/" className="link">
                             let's talk
-                        </a>
-                        <a href="/" className="link2">
+                        </Link>
+                        <Link to="/" className="link2">
                             Portfolio
-                        </a>
+                        </Link>
                     </div>
                     <div className="social">
                         <span>Get in touch</span>
