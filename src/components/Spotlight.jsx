@@ -16,20 +16,18 @@ function Spotlight() {
                         Hi <br /> I'm <span>SAFWAN</span>
                         <br />
                     </h1>
-                    <p>Aspiring Software Developer</p>
+                    <p>Software Developer</p>
                     <div className="about">
                         <span className="line" />
                         <p>
-                            Hi I'm a Software developer, <br /> who obsessed
-                            with programming and designing.
-                        </p>
+                            Hi I'm a Software developer from India <br /> </p>
                     </div>
                     <div className="links">
-                        <Link to="/" className="link">
+                        <Link to="/contact" className="link">
                             let's talk
                         </Link>
-                        <Link to="/" className="link2">
-                            Portfolio
+                        <Link to="/projects" className="link2">
+                            Projects
                         </Link>
                     </div>
                     <div className="social">

@@ -50,10 +50,10 @@ function Header() {
                         </li>
                         <li>
                             <NavLink
-                                to="/portfolio"
+                                to="/projects"
                                 activeClassName="active"
                             >
-                                Portfolio
+                                Projects
                             </NavLink>
                         </li>
                         <li>
@@ -88,8 +88,8 @@ function Header() {
                                         <NavLink to="/about">About</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/portfolio">
-                                            Portfolio
+                                        <NavLink to="/projects">
+                                            Projects
                                         </NavLink>
                                     </li>
                                     <li>
