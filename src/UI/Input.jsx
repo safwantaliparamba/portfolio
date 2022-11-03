@@ -1,7 +1,5 @@
 import React from "react";
 
-import './Input.css';
-
 function Input({ label, type, id, className,name }) {
     return (
         <div className={`input ${className}`}>

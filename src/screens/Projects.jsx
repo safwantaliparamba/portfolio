@@ -26,8 +26,7 @@ function Projects() {
                     title: "TrendZ - Instagram Clone",
                     description:
                         "TrendZ is a fully functional Instagram clone built with React, Redux-toolkit, Firebase, Python Django, Django-rest-framework, and PostgreSql database",
-                    githubLink:
-                        "https://github.com/safwantaliparamba/TrendZ/",
+                    githubLink: "https://github.com/safwantaliparamba/TrendZ/",
                 },
             ],
         },
@@ -46,7 +45,7 @@ function Projects() {
                 {
                     id: "XF8wPhKxSvE",
                     thumb: todoAppThumb,
-                    title: "Todo App Recat-Native",
+                    title: "Todo App React-Native",
                     description: "WhatsApp UI built using React & Django",
                     githubLink:
                         "https://github.com/safwantaliparamba/ToDo-app-React-Native",
@@ -156,7 +155,6 @@ const Container = styled.div`
         font-weight: 600;
         margin-bottom: 52px;
     }
-
 `;
 
 const ItemContainer = styled.div`
@@ -213,15 +211,12 @@ const TopTab = styled.div`
             background: #9e5ef3;
             color: #fff;
         }
-        @media screen and (max-width: 640px) {
-            /* font-size: 10px; */
-            /* max-width: 30%; */
-        }
     }
 `;
 
 const VideoContainer = styled.div`
     text-align: center;
+    max-height: 70vh;
     h1 {
         font-size: 28px;
         font-weight: 600;
@@ -241,5 +236,8 @@ const VideoContainer = styled.div`
     }
     iframe {
         width: 100%;
+    }
+    @media screen and (max-width: 640px) {
+        overflow-y: scroll;
     }
 `;
