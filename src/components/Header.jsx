@@ -8,14 +8,14 @@ function Header() {
     const [isShow, setIsShow] = useState(false);
     const [hasWidth, setHasWidth] = useState(false);
 
+    const updateSize = () => {
+        if (window.innerWidth <= 768) {
+            setHasWidth(true);
+        } else {
+            setHasWidth(false);
+        }
+    };
     useLayoutEffect(() => {
-        const updateSize = () => {
-            if (window.innerWidth <= 768) {
-                setHasWidth(true);
-            } else {
-                setHasWidth(false);
-            }
-        };
         window.addEventListener("resize", updateSize);
         updateSize();
         return () => {
@@ -35,7 +35,7 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/"
-                                activeClassName="active"
+                                activeclassname="active"
                             >
                                 Home
                             </NavLink>
@@ -43,7 +43,7 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/about"
-                                activeClassName="active"
+                                activeclassname="active"
                             >
                                 About
                             </NavLink>
@@ -51,7 +51,7 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/projects"
-                                activeClassName="active"
+                                activeclassname="active"
                             >
                                 Projects
                             </NavLink>
@@ -59,7 +59,7 @@ function Header() {
                         <li>
                             <NavLink
                                 to="/contact"
-                                activeClassName="active"
+                                activeclassname="active"
                             >
                                 Contact
                             </NavLink>

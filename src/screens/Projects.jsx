@@ -151,6 +151,7 @@ const Container = styled.div`
     padding: 12px;
 
     h1 {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
         text-align: center;
         font-weight: 600;
         margin-bottom: 52px;

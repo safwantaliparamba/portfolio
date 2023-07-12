@@ -106,6 +106,7 @@ const Wrapper = styled.section`
         .left {
             width: 50%;
             h1 {
+                font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans";
                 font-size: 52px;
                 font-weight: 600;
                 margin-bottom: 32px;
